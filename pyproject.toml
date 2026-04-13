@@ -1,0 +1,17 @@
+[tool.pyright]
+include = ["script.py"]
+exclude = ["**/__pycache__", "**/.*"]
+reportMissingImports = false
+reportMissingTypeStubs = false
+reportUnknownVariableType = false
+reportUnknownMemberType = false
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+
+# Ignore missing stubs for these modules
+ignore = ["dotenv"]
+
+[tool.pylsp]
+configurationSources = ["pycodestyle", "pyflakes"]
+plugins.pycodestyle.enabled = false
+plugins.pylint.enabled = false
